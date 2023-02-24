@@ -10,25 +10,18 @@ And prints a diagonal cross of that dimension.
 using namespace std;
 
 int main(){
-   int size, i;
+   int size, i, x;
    cout<< "Input size: ";
    cin>> size;
 
    cout<< "Shape: \n";
 
-    for(int x=0; x<size; x++){    //h
-      for( i=0; i<size; i++){    //w
-        if(x==i){
+    for(x=1; x<=size; x++){    //h
+      for( i=1; i<=size; i++){    //w
+        if(x==i || i+x==size+1){
             cout<< "*";
-           }else{
+          }else{
             cout<< " ";
-           }
-      }
-      for(int p=size; p>x; p--){
-        if(p==size+1){
-            cout<<" ";
-           }else{
-            cout<< "*";
            }
       }
       cout<<"\n";

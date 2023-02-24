@@ -16,6 +16,9 @@ int main(){
    cout<< "Shape: \n";
 
    for(int i=0; i<l; i++){
+      for(int x=0; x<=i; x++){
+         cout<< " ";
+      }
       for(int p=l; p>i; p--){
          cout << "*";
       }

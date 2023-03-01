@@ -15,11 +15,11 @@ int main(){
 
    cout<< "Shape: \n";
 
-   for(int i=0; i<l; i++){
-      for(int x=0; x<=i; x++){
+   for(int i=0; i<l; i++){            //h
+      for(int x=0; x<=i; x++){        //w
          cout<< " ";
       }
-      for(int p=l; p>i; p--){
+      for(int p=l; p>i; p--){         //w
          cout << "*";
       }
       cout<< "\n";

@@ -55,13 +55,10 @@ int countPrimes(int a, int b){
 }
 
 bool isTwinPrime(int n){
-   if(isPrime(n)==true){
-      if(isPrime(n-2)==true || isPrime(n+2)==true){      //task E: checks if the number 2 less and greater are also prime
-         return true;
-      }else{
-         return false;
-      }
-   }else{
+   if(isPrime(n)==true && isPrime(n-2)==true || isPrime(n+2)==true && isPrime(n)==true){     //task E: checks if the number 2 less and greater are also prime
+      return true;
+   }
+   else{
       return false;
    }
 }
@@ -78,12 +75,13 @@ int nextTwinPrime(int n){                       //task F: performs like task C
 
 int largestTwinPrime(int a, int b){             //task G:
    int largest=-1;                              // if isTwinPrime(i) remains false during the loop
-   for(int i=a; i<=b; i++){                     // largest will remain its default value -1
+   for(int i=b; i>=a; i--){                     // largest will remain its default value -1
       if(isTwinPrime(i)==true){                 // otherwise it will update to i
          largest=i;
+         return largest;
       }
    }
-   return largest;
+   return -1;
 }
 
 
